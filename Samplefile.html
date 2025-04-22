@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Product Card - Diptique Perfume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 400px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 2px solid black;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.1s;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-top: 10px;
+      transform: translate(10px, 10px); /* shifting slightly */
+      transition: transform 0.1s ease;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: grey;
+    }
+
+    .card p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: black;
+    }
+
+    .button-group {
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.1s ease;
+    }
+
+    #add-to-cart {
+      background-color: #ff9900;
+      color: white;
+    }
+
+    #add-to-cart:hover {
+      background-color: #e68a00;
+    }
+
+    #buy-now {
+      background-color: #c45500;
+      color: white;
+    }
+
+    #buy-now:hover {
+      background-color: #a94400;
+    }
+  </style>
 </head>
+
 <body>
-    
+
+  <div class="card">
+    <h1>Diptique Perfume</h1>
+
+    <p><strong>Product Details:</strong></p>
+    <p>Diptyque Do Son Eau de Parfum Spray for Men, 2.5 Ounce</p>
+    <p><strong>Scent:</strong> African Orange Flower, Iris, Rose, Tuberose, Pink Pepper, Benzoin, Musk</p>
+
+    <img src="https://m.media-amazon.com/images/I/7191u3r1O7L._SL1438_.jpg" alt="Diptique Perfume">
+
+    <div class="button-group">
+      <button id="add-to-cart" onclick="addToCart()">ADD TO CART</button>
+      <button id="buy-now" onclick="buyNow()">BUY NOW</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart() {
+      alert(" Product added to cart!");
+    }
+
+    function buyNow() {
+      alert(" Proceeding to buy now!");
+    }
+  </script>
+
 </body>
 </html>
